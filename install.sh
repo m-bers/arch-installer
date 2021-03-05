@@ -12,6 +12,7 @@ lvcreate -L 30GB vg0 -n root
 lvcreate -L 50GB vg0 -n home
 modprobe dm_mod
 vgchange -ay
+lsblk
 mkfs.ext4 /dev/vg0/root
 mount /dev/vg0/root /mnt
 mkdir /mnt/home
